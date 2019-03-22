@@ -18,5 +18,6 @@
 		<module>eureka-server2</module>
 		<module>member-service</module>
 		<module>order-service</module>
+		<module>common</module>
 	</modules>
 </project>
