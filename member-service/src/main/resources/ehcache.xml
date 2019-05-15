@@ -1,0 +1,18 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+	<diskStore path="java.io.tmpdir" />
+	<!--defaultCache:echcache 的默认缓存策略 -->
+	<defaultCache maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="120" timeToLiveSeconds="120" maxElementsOnDisk="10000000" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+		<persistence strategy="localTempSwap" />
+	</defaultCache>
+	<!-- 自定义缓存策略,最多可以存活60秒，如果期间超过30秒未访问 那么此缓存失效！ -->
+	<cache name="tokenCache" maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="30" timeToLiveSeconds="60" maxElementsOnDisk="10000000" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<!-- 自定义缓存策略,最多可以存活60秒，如果期间超过30秒未访问 那么此缓存失效！ -->
+	<cache name="accountRoles" maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="30" timeToLiveSeconds="60" maxElementsOnDisk="10000000" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+		<persistence strategy="localTempSwap" />
+	</cache>
+</ehcache>

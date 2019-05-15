@@ -19,5 +19,6 @@
 		<module>member-service</module>
 		<module>order-service</module>
 		<module>common</module>
+		<module>member-service1</module>
 	</modules>
 </project>
